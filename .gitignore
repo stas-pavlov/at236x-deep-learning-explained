@@ -1,7 +1,7 @@
 .vscode
 
-jupyter-notebooks
-jupyter-notebooks/*.*
+jupyter-notebooks/.ipynb_checkpoints/*.*
+jupyter-notebooks/.ipynb_checkpoints
 
 data
 data/*.*

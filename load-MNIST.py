@@ -1,3 +1,4 @@
+
 #%%
 # Import the relevant modules to be used later
 from __future__ import print_function
@@ -91,7 +92,7 @@ test = try_download(url_test_image, url_test_labels, num_test_samples)
 
 #%%
 # Plot a random image
-sample_number = 5001
+sample_number = 5002
 plt.imshow(train[sample_number,:-1].reshape(28,28), cmap="gray_r")
 plt.axis('off')
 print("Image Label: ", train[sample_number,-1])
