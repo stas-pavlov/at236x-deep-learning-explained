@@ -1,0 +1,9 @@
+.vscode
+
+jupyter-notebooks
+jupyter-notebooks/*.*
+
+data
+data/*.*
+data/MNIST
+data/MNIST/*.*
