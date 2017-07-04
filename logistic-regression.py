@@ -74,6 +74,7 @@ def create_model(features):
 #%%
 # Scale the input to 0-1 range by dividing each pixel by 255.
 input_s = input/255
+input_s = C.splice(input_s, C.sqrt(input_s), C.square(input_s))
 z = create_model(input_s)
 
 #%%
@@ -182,7 +183,7 @@ test_input_map = {
 }
 
 # Test data for trained model
-test_minibatch_size = 512
+test_minibatch_size = 64
 num_samples = 10000
 num_minibatches_to_test = num_samples // test_minibatch_size
 test_result = 0.0
