@@ -63,6 +63,7 @@ input = C.input_variable(input_dim)
 label = C.input_variable(num_output_classes)
 
 #%%
+# We create 2 dense layers by 400 inputs (not 400->200 as in training and Jupyter notebook mentioned)
 def create_model(features):
     with C.layers.default_options(init = C.layers.glorot_uniform(), activation = C.ops.relu):
             h = features
@@ -71,7 +72,6 @@ def create_model(features):
             r = C.layers.Dense(num_output_classes, activation = None)(h)
             return r
         
-# z = create_model(input)
 
 #%%
 # Scale the input to 0-1 range by dividing each pixel by 255.
