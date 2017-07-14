@@ -234,3 +234,16 @@ plt.axis('off')
 
 img_gt, img_pred = gtlabel[sample_number], pred[sample_number]
 print("Image Label: ", img_pred)
+
+#%% Load custom image (inverse) and check the model
+from PIL import Image
+
+#%%
+im = Image.open("C:\\Users\\stanisp\\Source\\Repos\\at236x-deep-learning-explained\\data\\MNIST\\MysteryNumberD.bmp")
+pix = im.load()
+print (im.size) #Get the width and hight of the image for iterating over
+#pixel_values = list(im.getdata())
+pixel_values = np.array(list(im.getdata())).reshape(28*28)
+#print (pixel_values)
+res = out.eval(pixel_values)
+print(res)
