@@ -104,7 +104,7 @@ def create_model_with_pooling(features):
                                        strides=(1,1), 
                                        pad=True, name='second_conv')(h)
             h = C.layers.AveragePooling(filter_shape=(5,5), 
-                                       strides=(2,2), name='secomd_pool')(h)
+                                       strides=(2,2), name='second_pool')(h)
             r = C.layers.Dense(num_output_classes, activation = None, name='classify')(h)
             return r
 
